@@ -1,5 +1,5 @@
 
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -20,7 +20,7 @@
 
         <section class="registration-card">
 
-            <!-- LEFT SECTION -->
+            
 
             <div class="welcome-section">
 
@@ -57,7 +57,7 @@
             </div>
 
 
-            <!-- RIGHT SECTION -->
+            
 
             <div class="form-section">
 
@@ -94,7 +94,7 @@
 
                     <form action="/register" method="POST">
 
-                        <!-- NAME -->
+                        
 
                         <div class="input-group">
 
@@ -116,7 +116,7 @@
                         </div>
 
 
-                        <!-- EMAIL -->
+                        
 
                         <div class="input-group">
 
@@ -138,7 +138,7 @@
                         </div>
 
 
-                        <!-- TERMS -->
+                        
 
                         <div class="terms">
 
@@ -160,7 +160,7 @@
                         </div>
 
 
-                        <!-- BUTTON -->
+                        
 
                         <button type="submit" class="submit-btn">
 
@@ -192,4 +192,404 @@
     </main>
 
 </body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Midnight Aurora | Registration</title>
+
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+
+    <div class="background-glow glow-one"></div>
+    <div class="background-glow glow-two"></div>
+
+    <main class="main-container">
+
+        <section class="registration-card">
+
+            <!-- LEFT WELCOME PANEL -->
+
+            <div class="welcome-section">
+
+                <div class="brand">
+                    <span class="brand-icon">✦</span>
+                    AURORA
+                </div>
+
+                <div class="welcome-content">
+
+                    <div class="moon-icon">☾</div>
+
+                    <h1>
+                        Welcome to<br>
+                        Something New.
+                    </h1>
+
+                    <p>
+                        Your journey starts here.
+                        Create your account and become
+                        part of our community.
+                    </p>
+
+                    <div class="welcome-tag">
+                        ✨ YOUR FUTURE STARTS TODAY
+                    </div>
+
+                </div>
+
+                <div class="left-footer">
+                    Designed for your next chapter.
+                </div>
+
+            </div>
+
+
+            <!-- RIGHT PANEL -->
+
+            <div class="form-section">
+
+                <!-- REGISTRATION VIEW -->
+
+                <div id="registerView" class="page-view">
+
+                    <div class="form-top">
+                        <span>NEW TO AURORA?</span>
+                        <span class="top-label">JOIN US</span>
+                    </div>
+
+                    <div class="form-content">
+
+                        <div class="form-heading">
+
+                            <span class="small-heading">
+                                GET STARTED
+                            </span>
+
+                            <h2>Create Account</h2>
+
+                            <p>
+                                Enter your details to join our community.
+                            </p>
+
+                        </div>
+
+
+                        <div id="errorMessage"
+                             class="error-message"
+                             role="alert"
+                             aria-live="polite"
+                             hidden>
+                        </div>
+
+
+                        <div id="successMessage"
+                             class="success-message"
+                             role="status"
+                             aria-live="polite"
+                             hidden>
+                        </div>
+
+
+                        <form id="registrationForm" novalidate>
+
+                            <!-- FULL NAME -->
+
+                            <div class="input-group">
+
+                                <label for="name">
+                                    FULL NAME
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="name"
+                                    name="name"
+                                    placeholder="Enter your full name"
+                                    autocomplete="name"
+                                    maxlength="80"
+                                    required
+                                >
+
+                                <small class="field-error"
+                                       id="nameError"></small>
+
+                            </div>
+
+
+                            <!-- EMAIL -->
+
+                            <div class="input-group">
+
+                                <label for="email">
+                                    EMAIL ADDRESS
+                                </label>
+
+                                <input
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                    placeholder="Enter your email"
+                                    autocomplete="email"
+                                    maxlength="254"
+                                    required
+                                >
+
+                                <small class="field-error"
+                                       id="emailError"></small>
+
+                            </div>
+
+
+                            <!-- PASSWORD -->
+
+                            <div class="input-group">
+
+                                <label for="password">
+                                    PASSWORD
+                                </label>
+
+                                <div class="password-wrapper">
+
+                                    <input
+                                        type="password"
+                                        id="password"
+                                        name="password"
+                                        placeholder="Create a strong password"
+                                        autocomplete="new-password"
+                                        required
+                                    >
+
+                                    <button
+                                        type="button"
+                                        class="toggle-password"
+                                        data-target="password"
+                                        aria-label="Show password"
+                                        aria-pressed="false">
+                                        Show
+                                    </button>
+
+                                </div>
+
+                                <div class="strength-container">
+
+                                    <div class="strength-track">
+                                        <div id="strengthBar"></div>
+                                    </div>
+
+                                    <span id="strengthText">
+                                        Password strength
+                                    </span>
+
+                                </div>
+
+                                <ul class="password-rules">
+
+                                    <li id="ruleLength">
+                                        At least 8 characters
+                                    </li>
+
+                                    <li id="ruleUpper">
+                                        One uppercase letter
+                                    </li>
+
+                                    <li id="ruleLower">
+                                        One lowercase letter
+                                    </li>
+
+                                    <li id="ruleNumber">
+                                        One number
+                                    </li>
+
+                                    <li id="ruleSpecial">
+                                        One special character
+                                    </li>
+
+                                </ul>
+
+                                <small class="field-error"
+                                       id="passwordError"></small>
+
+                            </div>
+
+
+                            <!-- CONFIRM PASSWORD -->
+
+                            <div class="input-group">
+
+                                <label for="confirmPassword">
+                                    CONFIRM PASSWORD
+                                </label>
+
+                                <div class="password-wrapper">
+
+                                    <input
+                                        type="password"
+                                        id="confirmPassword"
+                                        name="confirmPassword"
+                                        placeholder="Re-enter your password"
+                                        autocomplete="new-password"
+                                        required
+                                    >
+
+                                    <button
+                                        type="button"
+                                        class="toggle-password"
+                                        data-target="confirmPassword"
+                                        aria-label="Show password"
+                                        aria-pressed="false">
+                                        Show
+                                    </button>
+
+                                </div>
+
+                                <small class="field-error"
+                                       id="confirmError"></small>
+
+                            </div>
+
+
+                            <!-- TERMS -->
+
+                            <div class="terms">
+
+                                <input
+                                    type="checkbox"
+                                    id="terms"
+                                    name="terms"
+                                    required
+                                >
+
+                                <label for="terms">
+                                    I agree to the
+                                    <a href="#terms">Terms & Conditions</a>
+                                </label>
+
+                            </div>
+
+                            <small class="field-error"
+                                   id="termsError"></small>
+
+
+                            <!-- SUBMIT -->
+
+                            <button
+                                type="submit"
+                                class="submit-btn"
+                                id="submitButton">
+
+                                <span id="buttonText">
+                                    Create My Account
+                                </span>
+
+                                <span>→</span>
+
+                            </button>
+
+                        </form>
+
+
+                        <div class="form-bottom">
+                            ✦ Simple. Secure. Beautiful.
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- SUCCESS VIEW -->
+
+                <div id="successView"
+                     class="page-view"
+                     hidden>
+
+                    <div class="form-top">
+                        <span>REGISTRATION STATUS</span>
+                        <span class="status-dot">● SUCCESS</span>
+                    </div>
+
+                    <div class="success-content">
+
+                        <div class="success-small-icon">
+                            ✓
+                        </div>
+
+                        <span class="small-heading">
+                            ACCOUNT CREATED
+                        </span>
+
+                        <h2>You're Registered!</h2>
+
+                        <p>
+                            Congratulations! Your registration
+                            has been completed successfully.
+                        </p>
+
+
+                        <div class="user-details">
+
+                            <div class="detail-row">
+                                <span>FULL NAME</span>
+                                <strong id="displayName"></strong>
+                            </div>
+
+                            <div class="detail-row">
+                                <span>EMAIL ADDRESS</span>
+                                <strong id="displayEmail"></strong>
+                            </div>
+
+                            <div class="detail-row">
+                                <span>STATUS</span>
+                                <strong class="verified">
+                                    ✓ Registration Successful
+                                </strong>
+                            </div>
+
+                        </div>
+
+
+                        <button
+                            type="button"
+                            id="registerAgain"
+                            class="submit-btn">
+
+                            Register Another User →
+                        </button>
+
+                        <div class="form-bottom">
+                            ✦ Thank you for joining us.
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <footer class="page-footer">
+            © 2026 AURORA. ALL RIGHTS RESERVED.
+        </footer>
+
+    </main>
+
+
+    <!-- JAVASCRIPT FILES -->
+
+    <script src="/router.js" defer></script>
+    <script src="/script.js" defer></script>
+
+</body>
 </html>
+

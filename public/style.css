@@ -15,7 +15,7 @@ body {
 }
 
 
-/* 2. BACKGROUND */
+
 
 body::before {
     content: "";
@@ -74,7 +74,7 @@ body::before {
 }
 
 
-/* 3. MAIN CONTAINER */
+
 
 .main-container {
     min-height: 100vh;
@@ -86,7 +86,7 @@ body::before {
 }
 
 
-/* 4. REGISTRATION CARD */
+
 
 .registration-card {
     width: 100%;
@@ -125,7 +125,6 @@ body::before {
 }
 
 
-/* 5. LEFT WELCOME SECTION */
 
 .welcome-section {
     position: relative;
@@ -247,7 +246,7 @@ body::before {
 }
 
 
-/* 6. RIGHT FORM SECTION */
+
 
 .form-section {
     padding: 35px 45px;
@@ -291,7 +290,7 @@ body::before {
 }
 
 
-/* 7. FORM CONTENT */
+
 
 .form-content {
     width: 100%;
@@ -326,7 +325,7 @@ body::before {
 }
 
 
-/* 8. INPUT FIELDS */
+
 
 .input-group {
     margin-bottom: 25px;
@@ -378,7 +377,7 @@ body::before {
 }
 
 
-/* 9. TERMS AND CONDITIONS */
+
 
 .terms {
     display: flex;
@@ -407,7 +406,7 @@ body::before {
 }
 
 
-/* 10. SUBMIT BUTTON */
+
 
 .submit-btn {
     width: 100%;
@@ -458,7 +457,7 @@ body::before {
 }
 
 
-/* 11. FORM FOOTER */
+
 
 .form-bottom {
     text-align: center;
@@ -478,7 +477,7 @@ body::before {
 }
 
 
-/* 12. ERROR MESSAGE */
+
 
 .error-message {
     padding: 12px;
@@ -494,7 +493,7 @@ body::before {
 }
 
 
-/* 13. SUCCESS PAGE */
+
 
 .success-left {
     background:
@@ -601,7 +600,7 @@ body::before {
 }
 
 
-/* 14. PAGE FOOTER */
+
 
 .page-footer {
     margin-top: 30px;
@@ -614,7 +613,7 @@ body::before {
 }
 
 
-/* 15. TABLET RESPONSIVENESS */
+
 
 @media (max-width: 800px) {
 
@@ -644,7 +643,7 @@ body::before {
 }
 
 
-/* 16. MOBILE RESPONSIVENESS */
+
 
 @media (max-width: 480px) {
 
@@ -689,4 +688,228 @@ body::before {
     .page-footer {
         font-size: 8px;
     }
+} 
+
+/* ==================================
+   LEVEL 2 - ADVANCED FORM VALIDATION
+================================== */
+
+/* Hide inactive application pages */
+
+[hidden] {
+    display: none !important;
+}
+
+/* Top label */
+
+.top-label {
+    color: #a98bff;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+/* Password input wrapper */
+
+.password-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.password-wrapper input {
+    width: 100%;
+    padding-right: 70px;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 12px;
+
+    border: none;
+    background: transparent;
+
+    color: #a98bff;
+    font-size: 11px;
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+.toggle-password:hover {
+    color: #ffffff;
+}
+
+/* Password strength meter */
+
+.strength-container {
+    margin-top: 12px;
+}
+
+.strength-track {
+    width: 100%;
+    height: 6px;
+
+    border-radius: 20px;
+    background: rgba(255,255,255,0.1);
+
+    overflow: hidden;
+}
+
+#strengthBar {
+    width: 0%;
+    height: 100%;
+
+    border-radius: 20px;
+    transition: width 0.3s ease, background 0.3s ease;
+}
+
+#strengthBar.weak {
+    background: #ff626f;
+}
+
+#strengthBar.fair {
+    background: #f4ba50;
+}
+
+#strengthBar.good {
+    background: #49b8dc;
+}
+
+#strengthBar.strong {
+    background: #4be0a0;
+}
+
+#strengthText {
+    display: block;
+    margin-top: 7px;
+
+    font-size: 10px;
+    color: #a5a5bd;
+}
+
+/* Password rules */
+
+.password-rules {
+    list-style: none;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+
+    margin-top: 13px;
+    margin-bottom: 10px;
+}
+
+.password-rules li {
+    font-size: 9px;
+    color: #9696ae;
+
+    position: relative;
+    padding-left: 15px;
+
+    transition: 0.2s;
+}
+
+.password-rules li::before {
+    content: "○";
+    position: absolute;
+    left: 0;
+}
+
+.password-rules li.valid {
+    color: #61e2a9;
+}
+
+.password-rules li.valid::before {
+    content: "✓";
+}
+
+/* Input validation */
+
+.input-group input.invalid {
+    border-color: #ff626f;
+    box-shadow: 0 0 0 2px rgba(255,98,111,0.08);
+}
+
+.input-group input.valid-input {
+    border-color: #49c99a;
+}
+
+.field-error {
+    display: block;
+
+    min-height: 0;
+    margin-top: 6px;
+
+    color: #ff8792;
+    font-size: 10px;
+    line-height: 1.5;
+}
+
+/* General error notification */
+
+.error-message {
+    padding: 12px;
+    margin-bottom: 18px;
+
+    border: 1px solid rgba(255,90,110,0.3);
+    border-radius: 8px;
+
+    background: rgba(255,60,90,0.08);
+
+    color: #ff9ba9;
+    font-size: 12px;
+}
+
+/* Success notification */
+
+.success-message {
+    padding: 12px;
+    margin-bottom: 18px;
+
+    background: rgba(65,211,154,0.1);
+    border: 1px solid rgba(65,211,154,0.3);
+    border-radius: 8px;
+
+    color: #69e4ac;
+    font-size: 12px;
+}
+
+/* Submit button disabled state */
+
+.submit-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+/* Success view */
+
+.success-content {
+    animation: appear 0.5s ease;
+}
+
+.success-small-icon {
+    box-shadow: 0 0 25px rgba(65,211,154,0.12);
+}
+
+/* User details */
+
+.user-details {
+    word-break: break-word;
+}
+
+/* Responsive password rules */
+
+@media (max-width: 480px) {
+
+    .password-rules {
+        grid-template-columns: 1fr;
+    }
+
+    .strength-container {
+        margin-top: 10px;
+    }
+
 }

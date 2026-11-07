@@ -1,8 +1,7 @@
-
 {
   "name": "midnight-aurora",
-  "version": "1.0.0",
-  "description": "Midnight Aurora Registration Website",
+  "version": "2.0.0",
+  "description": "Level 2 Complex Form Validation and Dynamic DOM Manipulation",
   "main": "app.js",
   "scripts": {
     "start": "node app.js",

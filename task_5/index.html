@@ -1,1 +1,57 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bright Future College</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Bright Future College</h1>
+        <p>Student Management System</p>
+    </header>
+
+    <div class="container">
+
+        <h2>Student Registration</h2>
+
+        <form id="studentForm">
+            <input type="hidden" id="studentId">
+
+            <input type="text" id="name"
+                placeholder="Enter Student Name" required>
+
+            <input type="text" id="course"
+                placeholder="Enter Course" required>
+
+            <select id="year" required>
+                <option value="">Select Year</option>
+                <option>1st Year</option>
+                <option>2nd Year</option>
+                <option>3rd Year</option>
+                <option>4th Year</option>
+            </select>
+
+            <button type="submit" id="submitBtn">
+                Add Student
+            </button>
+        </form>
+
+        <h2>Student Details</h2>
+
+        <div id="studentList" class="student-grid">
+            Loading students...
+        </div>
+
+    </div>
+
+    <footer>
+        <p>© 2026 Bright Future College</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

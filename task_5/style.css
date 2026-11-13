@@ -1,0 +1,231 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f1f5fb;
+    color: #26344a;
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, #172f59, #356bb3);
+    color: white;
+    text-align: center;
+    padding: 35px 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+header h1 {
+    font-size: 30px;
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+}
+
+header p {
+    font-size: 15px;
+    color: #dceaff;
+}
+
+/* Main Container */
+.container {
+    width: 88%;
+    max-width: 950px;
+    margin: 35px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 14px;
+    box-shadow: 0 5px 25px rgba(30, 60, 100, 0.08);
+}
+
+/* Section Headings */
+h2 {
+    color: #234879;
+    font-size: 22px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #e7edf5;
+}
+
+/* Registration Form */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 35px;
+}
+
+input, select {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #d4deeb;
+    border-radius: 8px;
+    outline: none;
+    font-size: 15px;
+    background: #f9fbff;
+    transition: 0.3s;
+}
+
+input:focus, select:focus {
+    border-color: #3676c5;
+    box-shadow: 0 0 7px rgba(54,118,197,0.2);
+    background: white;
+}
+
+/* General Buttons */
+button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 7px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+#submitBtn {
+    background: #285b9e;
+    color: white;
+    font-size: 16px;
+}
+
+#submitBtn:hover {
+    background: #174477;
+    transform: translateY(-2px);
+}
+
+/* Student Cards */
+.student-card {
+    background: #f6f9fe;
+    padding: 20px;
+    margin: 16px 0;
+    border-radius: 10px;
+    border: 1px solid #e0e9f5;
+    border-left: 5px solid #3676c5;
+    transition: 0.3s ease;
+    animation: fadeIn 0.4s ease;
+}
+
+.student-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(40, 80, 130, 0.12);
+}
+
+.student-card p {
+    font-size: 15px;
+    line-height: 1.8;
+    margin-bottom: 12px;
+    color: #34465f;
+}
+
+/* Edit Button */
+.edit-btn {
+    background: #f0a72f;
+    color: white;
+    margin-right: 8px;
+}
+
+.edit-btn:hover {
+    background: #d58b13;
+}
+
+/* Delete Button */
+.delete-btn {
+    background: #e05252;
+    color: white;
+}
+
+.delete-btn:hover {
+    background: #c52d2d;
+}
+
+/* Footer */
+footer {
+    background: #172f59;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    font-size: 14px;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Mobile Responsive Design */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 23px;
+    }
+
+    .container {
+        width: 93%;
+        padding: 20px;
+        margin: 20px auto;
+    }
+
+    h2 {
+        font-size: 19px;
+    }
+
+    .student-card {
+        padding: 15px;
+    }
+
+    button {
+        padding: 10px 14px;
+    }
+}
+/* Student Grid */
+.student-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+/* Improved Student Cards */
+.student-card {
+    background: white;
+    padding: 22px;
+    margin: 0;
+    border: 1px solid #e1eaf5;
+    border-left: 5px solid #3676c5;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(30, 60, 100, 0.07);
+    transition: 0.3s ease;
+}
+
+.student-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(30, 60, 100, 0.13);
+}
+
+.student-card p {
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 15px;
+    overflow-wrap: anywhere;
+}
+
+.student-card button {
+    min-width: 85px;
+}
+
+@media (max-width: 650px) {
+    .student-grid {
+        grid-template-columns: 1fr;
+    }
+}
